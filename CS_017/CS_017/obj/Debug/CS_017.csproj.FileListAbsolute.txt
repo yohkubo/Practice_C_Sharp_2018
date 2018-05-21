@@ -1,0 +1,7 @@
+C:\Users\windows7\Desktop\Practice_C#\Practice_C_Sharp_NEW_2018\CS_017\CS_017\bin\Debug\CS_017.exe.config
+C:\Users\windows7\Desktop\Practice_C#\Practice_C_Sharp_NEW_2018\CS_017\CS_017\bin\Debug\CS_017.exe
+C:\Users\windows7\Desktop\Practice_C#\Practice_C_Sharp_NEW_2018\CS_017\CS_017\bin\Debug\CS_017.pdb
+C:\Users\windows7\Desktop\Practice_C#\Practice_C_Sharp_NEW_2018\CS_017\CS_017\obj\Debug\CS_017.csprojResolveAssemblyReference.cache
+C:\Users\windows7\Desktop\Practice_C#\Practice_C_Sharp_NEW_2018\CS_017\CS_017\obj\Debug\CS_017.csproj.CoreCompileInputs.cache
+C:\Users\windows7\Desktop\Practice_C#\Practice_C_Sharp_NEW_2018\CS_017\CS_017\obj\Debug\CS_017.exe
+C:\Users\windows7\Desktop\Practice_C#\Practice_C_Sharp_NEW_2018\CS_017\CS_017\obj\Debug\CS_017.pdb
