@@ -27,7 +27,6 @@ namespace CS_P033_Classes_Objects
                     Cards.Add(cardOne);
                 }
             }
-
         }
             
         public List<Card> Cards = new List<Card>();
