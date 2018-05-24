@@ -11,29 +11,37 @@ namespace CS_P033_Classes_Objects
         static void Main(string[] args)
         {
             Deck deck = new Deck();
-            deck = Shuffle(deck);
+            int timeShuffled = 0;
+            deck = Shuffle(deck, out timeShuffled, times:10);
+
 
             for(int i = 0; i < deck.Cards.Count; i++)
             {
             Console.WriteLine(deck.Cards[i].Face + " of " + deck.Cards[i].Suit);
             }
             Console.WriteLine("Amount of cards: " + deck.Cards.Count);
+            Console.WriteLine("Times of shuffled: " + timeShuffled);
             Console.ReadLine();
         }
 
-        public static Deck Shuffle(Deck deck)
+        public static Deck Shuffle(Deck deck, out int timeShuffled, int times = 1)
         {
-            List<Card> TempList = new List<Card>();
-            Random random = new Random();
-
-            while (deck.Cards.Count > 0)
+            timeShuffled = 0;
+            for (int i = 0; i < times; i++)
             {
-                int ranNum = random.Next(0, deck.Cards.Count);
-                TempList.Add(deck.Cards[ranNum]);
-                deck.Cards.RemoveAt(ranNum);
-            }
+                timeShuffled++;
+                List<Card> TempList = new List<Card>();
+                Random random = new Random();
 
-            deck.Cards = TempList;
+                while (deck.Cards.Count > 0)
+                {
+                    int ranNum = random.Next(0, deck.Cards.Count);
+                    TempList.Add(deck.Cards[ranNum]);
+                    deck.Cards.RemoveAt(ranNum);
+                }
+
+                deck.Cards = TempList;
+            }
             return deck;
         }
     }
