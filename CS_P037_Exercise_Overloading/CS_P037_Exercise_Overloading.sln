@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_P037_Exercise_Overloading", "CS_P037_Exercise_Overloading\CS_P037_Exercise_Overloading.csproj", "{4970E6CA-44C3-423F-A4A8-F1EADC39DEDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4970E6CA-44C3-423F-A4A8-F1EADC39DEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4970E6CA-44C3-423F-A4A8-F1EADC39DEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4970E6CA-44C3-423F-A4A8-F1EADC39DEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4970E6CA-44C3-423F-A4A8-F1EADC39DEDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7E11D85-F84E-4713-BD85-85535B588283}
+	EndGlobalSection
+EndGlobal
