@@ -13,9 +13,9 @@ namespace CS_P033_Classes_Objects
             Deck deck = new Deck();
             deck.Shuffle(3);
 
-            for(int i = 0; i < deck.Cards.Count; i++)
+            for (int i = 0; i < deck.Cards.Count; i++)
             {
-            Console.WriteLine(deck.Cards[i].Face + " of " + deck.Cards[i].Suit);
+                Console.WriteLine(deck.Cards[i].Face + " of " + deck.Cards[i].Suit);
             }
             Console.WriteLine("Amount of cards: " + deck.Cards.Count);
             Console.ReadLine();
