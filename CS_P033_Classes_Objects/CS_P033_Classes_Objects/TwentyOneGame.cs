@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CS_P033_Classes_Objects
 {
-    public class TwentyOneGame : Game
+    public class TwentyOneGame : Game, IWalkAway
     {
         public override void Play()
         {
@@ -19,5 +19,9 @@ namespace CS_P033_Classes_Objects
             base.ListPlayers();
         }
 
+        public void WalkAway(Player player)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
