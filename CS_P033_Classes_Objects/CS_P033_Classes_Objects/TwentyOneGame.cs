@@ -21,7 +21,7 @@ namespace CS_P033_Classes_Objects
 
         public void WalkAway(Player player)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); 
         }
     }
 }

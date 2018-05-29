@@ -10,10 +10,20 @@ namespace CS_P033_Classes_Objects
     {
         static void Main(string[] args)
         {
-            TwentyOneGame game = new TwentyOneGame();
-            game.Players = new List<string> { "Jesse", "Bill", "Bob" };
-            game.ListPlayers();
-            Console.ReadLine();
+            Game game = new TwentyOneGame();
+            game.Players = new List<Player>();
+            Player player = new Player() { Name = "Jesse" };
+            
+            game = game + player;
+            Console.WriteLine(game.Players.Count);
+
+            foreach(Player member in game.Players)
+            {
+                Console.WriteLine("Player name: " + member.Name);
+            }
+
+            game = game - player;
+            Console.WriteLine(game.Players.Count);
 
             //Deck deck = new Deck();
             //deck.Shuffle(3);
@@ -23,7 +33,7 @@ namespace CS_P033_Classes_Objects
             //    Console.WriteLine(card.Face + " of " + card.Suit);
             //}
             //Console.WriteLine("Amount of cards: " + deck.Cards.Count);
-            //Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }
