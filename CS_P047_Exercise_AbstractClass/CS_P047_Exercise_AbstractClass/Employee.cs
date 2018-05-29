@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace CS_P047_Exercise_AbstractClass
 {
-    class Employee : Person, IQuittable
+    // P.54 Ex.1
+    class Employee<T> : Person, IQuittable
     {
+        public List<T> Things = new List<T>(); // P.54 Ex.2
         public int EmployeeId { get; set; }
         public bool isActiveEmployee { get; set; }
         
@@ -23,11 +25,11 @@ namespace CS_P047_Exercise_AbstractClass
         }
 
         // operator== 
-        public static bool operator== (Employee emp1, Employee emp2)
+        public static bool operator== (Employee<T> emp1, Employee<T> emp2)
         {
             return (emp1.EmployeeId == emp2.EmployeeId);
         } 
-        public static bool operator!=(Employee emp1, Employee emp2)
+        public static bool operator!=(Employee<T> emp1, Employee<T> emp2)
         {
             Console.WriteLine(emp1.firstName + "'ID and " + emp2.firstName + "'s ID are different. No problem.");
 
