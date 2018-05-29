@@ -10,10 +10,13 @@ namespace CS_P047_Exercise_AbstractClass
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee() { firstName = "Sample", lastName = "Student" };
+            //Person person = new Employee() { firstName = "Sample", lastName = "Student" };
+            //person.SayName(person.lastName, person.firstName);
 
-            employee.SayName(employee.lastName, employee.firstName);
-
+            IQuittable quittable = new Employee() { firstName = "Sample", lastName = "Employee" };
+            
+            quittable.Quit();
+            
             Console.ReadLine();
         }
     }
