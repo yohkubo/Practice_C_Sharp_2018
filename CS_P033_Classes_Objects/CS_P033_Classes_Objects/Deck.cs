@@ -12,21 +12,35 @@ namespace CS_P033_Classes_Objects
         {
             //Cards = new List<Card>();
 
-            List<string> Suits = new List<string>() { "Clubs", "Spades", "Hearts", "Diamonds" };
-            List<string> Faces = new List<string>()
-            { "Two","Three","Four","Five","Six","Seven",
-                "Eight","Nine","Ten","Jack","Queen","King","Ace"};
-            
-            foreach(string suit in Suits)
+            for (int i = 0; i<13; i++)
             {
-                foreach (string face in Faces)
+                for(int j = 0; j<4; j++)
                 {
-                    Card cardOne = new Card();
-                    cardOne.Suit = suit;
-                    cardOne.Face = face;
-                    Cards.Add(cardOne);
+                    Card card = new Card();
+                    card.Face = (Face)i;
+                    card.Suit = (Suit)j;
+                    Cards.Add(card);
                 }
             }
+
+            
+            //    List<Suit> Suits = new List<Suit>()
+            //{ Suit.Clubs, Suit.Diamonds, Suit.Hearts, Suit.Spades };
+
+            //List<string> Faces = new List<string>()
+            //{ "Two","Three","Four","Five","Six","Seven",
+            //    "Eight","Nine","Ten","Jack","Queen","King","Ace"};
+            
+            //foreach(Suit suit in Suits)
+            //{
+            //    foreach (string face in Faces)
+            //    {
+            //        Card cardOne = new Card();
+            //        cardOne.Suit = suit;
+            //        cardOne.Face = face;
+            //        Cards.Add(cardOne);
+            //    }
+            //}
         }
             
         public List<Card> Cards = new List<Card>();

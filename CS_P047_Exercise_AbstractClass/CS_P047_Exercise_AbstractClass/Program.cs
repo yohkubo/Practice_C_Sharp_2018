@@ -10,6 +10,7 @@ namespace CS_P047_Exercise_AbstractClass
     {
         static void Main(string[] args)
         {
+            //P.54 Ex.3
             Employee<string> employee = new Employee<string>();
             employee.Things = new List<string>();
             employee.firstName = "Yohei";
@@ -18,6 +19,7 @@ namespace CS_P047_Exercise_AbstractClass
             employee.Things.Add("Cell Phone");
             employee.Things.Add("Car");
 
+            //P.54 Ex.4
             Employee<int> employee1 = new Employee<int>() { firstName = "Kensuke", lastName = "Kubo" };
             employee1.Things = new List<int>();
             employee1.Things.Add(8);

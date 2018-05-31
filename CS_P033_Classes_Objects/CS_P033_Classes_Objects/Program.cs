@@ -10,30 +10,26 @@ namespace CS_P033_Classes_Objects
     {
         static void Main(string[] args)
         {
-            Game game = new TwentyOneGame();
-            game.Players = new List<Player>();
-            Player player = new Player() { Name = "Jesse" };
-            
-            game = game + player;
-            Console.WriteLine(game.Players.Count);
+            Deck deck = new Deck();
+            deck.Shuffle(3);
 
-            foreach(Player member in game.Players)
+            foreach (Card card in deck.Cards)
             {
-                Console.WriteLine("Player name: " + member.Name);
+                Console.WriteLine(card.Face + " of " + card.Suit);
             }
-
-            game = game - player;
-            Console.WriteLine(game.Players.Count);
-
-            //Deck deck = new Deck();
-            //deck.Shuffle(3);
-
-            //foreach (Card card in deck.Cards)
-            //{
-            //    Console.WriteLine(card.Face + " of " + card.Suit);
-            //}
-            //Console.WriteLine("Amount of cards: " + deck.Cards.Count);
+            Console.WriteLine("Amount of cards: " + deck.Cards.Count);
             Console.ReadLine();
         }
+
+        public enum DaysOfTheWeek
+        {
+            Monday,
+            Tuesday,
+            Wednesday,
+            Thursday,
+            Firday,
+            Saturday
+        }
+        
     }
 }
