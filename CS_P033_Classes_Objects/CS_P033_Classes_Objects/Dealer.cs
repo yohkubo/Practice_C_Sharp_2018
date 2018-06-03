@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CS_P033_Classes_Objects
 {
-    class Dealer
+    public class Dealer
     {
         public string Name { get; set; }
         public Deck Deck { get; set; }

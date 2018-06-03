@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CS_P033_Classes_Objects
 {
-    class Deck
+    public class Deck
     {
         public Deck()
         {
