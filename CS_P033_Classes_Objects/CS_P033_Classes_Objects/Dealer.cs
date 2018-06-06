@@ -22,6 +22,7 @@ namespace CS_P033_Classes_Objects
             Console.WriteLine(card);
             using (StreamWriter file = new StreamWriter(@"C:\Users\windows7\Documents\Logs\log.txt", true))
             {
+                file.WriteLine(DateTime.Now);
                 file.WriteLine(card);
             }
             Deck.Cards.RemoveAt(0);
