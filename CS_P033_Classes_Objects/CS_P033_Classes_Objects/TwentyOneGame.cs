@@ -49,6 +49,7 @@ namespace CS_P033_Classes_Objects
                         {
                             Console.WriteLine("Brackjack! {0} wins {1}", player.Name, Bets[player]);
                             player.Balance += Convert.ToInt32(Bets[player] * 1.5) + Bets[player];
+                            Console.WriteLine("Now, your balance is {0}.", player.Balance); // Added by Yohei
                             return;
                         }
                     }
@@ -130,8 +131,11 @@ namespace CS_P033_Classes_Objects
                 Console.WriteLine("Dealer is Busted!");
                 foreach (KeyValuePair<Player, int> entry in Bets)
                 {
-                    Console.WriteLine("{0} won {1}!", entry.Key.Name, entry.Value);
+                    Console.WriteLine("{0} won {1}!",
+                        entry.Key.Name, entry.Value);
                     Players.Where(x => x.Name == entry.Key.Name).First().Balance += (entry.Value * 2);
+                    Console.WriteLine("{0}'s balance is now {1}.",
+                        entry.Key.Name, entry.Key.Balance); // Added by Yohei
                     Dealer.Balance -= entry.Value;
                 }
                 return;
