@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 
 
-namespace CS_P033_Classes_Objects
+namespace Casino
 {
     public class Dealer
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CS_P033_Classes_Objects
+namespace Casino.TwentyOne
 {
     public class TwentyOneGame : Game, IWalkAway
     {

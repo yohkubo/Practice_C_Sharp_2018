@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CS_P033_Classes_Objects
+namespace Casino
 {
     public class Deck
     {
@@ -22,25 +22,6 @@ namespace CS_P033_Classes_Objects
                     Cards.Add(card);
                 }
             }
-
-            
-            //    List<Suit> Suits = new List<Suit>()
-            //{ Suit.Clubs, Suit.Diamonds, Suit.Hearts, Suit.Spades };
-
-            //List<string> Faces = new List<string>()
-            //{ "Two","Three","Four","Five","Six","Seven",
-            //    "Eight","Nine","Ten","Jack","Queen","King","Ace"};
-            
-            //foreach(Suit suit in Suits)
-            //{
-            //    foreach (string face in Faces)
-            //    {
-            //        Card cardOne = new Card();
-            //        cardOne.Suit = suit;
-            //        cardOne.Face = face;
-            //        Cards.Add(cardOne);
-            //    }
-            //}
         }
             
         public List<Card> Cards = new List<Card>();
