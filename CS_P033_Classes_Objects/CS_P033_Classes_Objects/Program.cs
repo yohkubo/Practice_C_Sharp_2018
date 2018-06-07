@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Casino;
+using Casino.TwentyOne;
 
 namespace CS_P033_Classes_Objects
 {
@@ -11,10 +13,10 @@ namespace CS_P033_Classes_Objects
     {
         static void Main(string[] args)
         {
-            string text = "Good day!!";
-            //File.WriteAllText(@"C:\Users\windows7\Documents\Logs\log.txt", text);
+            const string casinoname = "Grand Hotel and Casino";
+
             
-            Console.WriteLine("welcone to the Grand Hotel and Casino. Let's start by telling me your name.");
+            Console.WriteLine("welcone to the {0}. Let's start by telling me your name.",casinoname);
             string playerName = Console.ReadLine();
             Console.WriteLine("And how much money did you bring today?");
             int bank = Convert.ToInt32(Console.ReadLine());
@@ -23,6 +25,11 @@ namespace CS_P033_Classes_Objects
             if (answer == "yes" || answer == "year" || answer == "yeah" || answer == "ya")
             {
                 Player player = new Player(playerName, bank);
+                player.id = Guid.NewGuid();
+                using (StreamWriter file = new StreamWriter(@"C:\Users\windows7\Documents\Logs\log.txt", true))
+                {
+                    file.WriteLine(player.id);
+                }
                 Game game = new TwentyOneGame();
                 game += player;
                 player.isActivelyPlaying = true;
