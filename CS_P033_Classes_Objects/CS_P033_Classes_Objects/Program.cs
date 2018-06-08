@@ -14,12 +14,20 @@ namespace CS_P033_Classes_Objects
         static void Main(string[] args)
         {
             const string casinoname = "Grand Hotel and Casino";
-
             
             Console.WriteLine("welcone to the {0}. Let's start by telling me your name.",casinoname);
             string playerName = Console.ReadLine();
-            Console.WriteLine("And how much money did you bring today?");
-            int bank = Convert.ToInt32(Console.ReadLine());
+
+            bool isValidAnswer = false;
+            int bank = 0;
+
+            while (!isValidAnswer)
+            {
+                Console.WriteLine("How much money did you bring?");
+                isValidAnswer = int.TryParse(Console.ReadLine(), out bank);
+                if (!isValidAnswer) Console.WriteLine("Please enter digits only, no decimals.");
+            }
+
             Console.WriteLine("Hello, {0}. Would you like to join a game of 21 right now?", playerName);
             string answer = Console.ReadLine().ToLower(); 
             if (answer == "yes" || answer == "year" || answer == "yeah" || answer == "ya")
@@ -35,7 +43,22 @@ namespace CS_P033_Classes_Objects
                 player.isActivelyPlaying = true;
                 while(player.isActivelyPlaying && player.Balance > 0)
                 {
-                    game.Play();
+                    try
+                    {
+                        game.Play();
+                    }
+                    catch(FraudException)
+                    {
+                        Console.WriteLine("Security!! Kick this person out!!");
+                        Console.ReadLine();
+                        return;
+                    }
+                    catch(Exception)
+                    {
+                        Console.WriteLine("An error occered. Please contact your System Adiministrator");
+                        Console.Read();
+                        return;
+                    }
                 }
                 game -= player;
                 Console.WriteLine("Thank you for playing!");
