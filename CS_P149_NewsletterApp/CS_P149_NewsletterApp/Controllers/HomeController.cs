@@ -14,11 +14,18 @@ namespace CS_P149_NewsletterApp.Controllers
             return View();
         }
 
-        public ActionResult SignUp()
+        [HttpPost]
+        public ActionResult SignUp(string firstName, string lastName, string emailAddress)
         {
-
-
-            return View();
+            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(emailAddress))
+            {
+                return View("~/Views/Shared/Error.cshtml");
+            }
+            else
+            {
+                return View("Success");
+            }
+            
         }
 
 
