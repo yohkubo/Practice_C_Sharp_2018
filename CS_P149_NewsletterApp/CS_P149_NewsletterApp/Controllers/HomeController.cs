@@ -10,11 +10,17 @@ namespace CS_P149_NewsletterApp.Controllers
     {
         public ActionResult Index()
         {
-            
-
             ViewBag.Title = "Kicks";
             return View();
         }
+
+        public ActionResult SignUp()
+        {
+
+
+            return View();
+        }
+
 
         public ActionResult About()
         {
